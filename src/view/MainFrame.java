@@ -9,22 +9,30 @@ import src.view.panel.HeaderPanel;
 import src.view.panel.SidebarPanel;
 
 public class MainFrame extends JFrame {
+    HeaderPanel headerPanel;
+    SidebarPanel sidebarPanel;
+    ContentPanel contentPanel;
+
     public MainFrame(int width, int height, int header, int sidebar) {
         setTitle("JWiki");
 
         setLayout(new BorderLayout());
 
-        HeaderPanel head = new HeaderPanel(header);
-        SidebarPanel side = new SidebarPanel(sidebar);
-        ContentPanel content = new ContentPanel();
+        headerPanel = new HeaderPanel(header);
+        sidebarPanel = new SidebarPanel(sidebar);
+        contentPanel = new ContentPanel();
 
-        add(head, BorderLayout.NORTH);
-        add(side, BorderLayout.WEST);
-        add(content, BorderLayout.CENTER);
+        add(headerPanel, BorderLayout.NORTH);
+        add(sidebarPanel, BorderLayout.WEST);
+        add(contentPanel, BorderLayout.CENTER);
 
         setSize(width, height);
         setVisible(true);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public void setContent(String title, String content) {
+        contentPanel.setContent(title, content);
     }
 }

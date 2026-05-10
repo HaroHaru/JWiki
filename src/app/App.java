@@ -11,5 +11,9 @@ public class App {
         }
 
         MainFrame frame = new MainFrame(800, 600, 50, 200);
+
+        String content = service.read("Main");
+
+        frame.setContent("Main", content);
     }
 }
