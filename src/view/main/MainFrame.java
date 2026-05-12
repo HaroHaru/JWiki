@@ -1,12 +1,8 @@
-package src.view;
+package src.view.main;
 
 import java.awt.*;
 
 import javax.swing.*;
-
-import src.view.panel.ContentPanel;
-import src.view.panel.HeaderPanel;
-import src.view.panel.SidebarPanel;
 
 public class MainFrame extends JFrame {
     HeaderPanel headerPanel;

@@ -1,7 +1,7 @@
 package src.app;
 
 import src.service.WikiPageService;
-import src.view.*;
+import src.view.main.MainFrame;
 
 public class App {
     public static void main(String[] args) {
