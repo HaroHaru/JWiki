@@ -1,13 +1,14 @@
 package src.app;
 
-import src.service.WikiPageService;
+import src.model.WikiPageService; // need to erase
 import src.view.main.MainFrame;
 
 public class App {
     public static void main(String[] args) {
         WikiPageService service = new WikiPageService();
+
         if (!service.exists("Main")) {
-            service.create("Main", "# 임시 제목입니다.");
+            service.create("Main", "# Temporation Page");
         }
 
         MainFrame frame = new MainFrame(800, 600, 50, 200);

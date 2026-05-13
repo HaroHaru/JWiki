@@ -3,7 +3,7 @@ package src.view.pages;
 import javax.swing.JTextPane;
 import javax.swing.text.DefaultCaret;
 
-import src.util.PageFormatter;
+import src.model.PageFormatter; // need to erase
 
 public class ContentViewer extends JTextPane {
     private PageFormatter formatter;

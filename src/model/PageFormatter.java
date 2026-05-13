@@ -1,4 +1,4 @@
-package src.util;
+package src.model;
 
 public class PageFormatter {
     public String format(String title, String content) {
