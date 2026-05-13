@@ -1,4 +1,4 @@
-package src.view.components;
+package src.view.main.content;
 
 import javax.swing.JButton;
 import javax.swing.JToolBar;
@@ -10,5 +10,8 @@ public class ContentToolbar extends JToolBar {
     public ContentToolbar() {
         viewButton = new JButton("View");
         editButton = new JButton("Edit");
+
+        add(viewButton);
+        add(editButton);
     }
 }

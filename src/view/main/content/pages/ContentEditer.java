@@ -1,8 +1,8 @@
-package src.view.pages;
+package src.view.main.content.pages;
 
 import javax.swing.JTextArea;
 
-import src.model.PageFormatter; // need to erase
+import src.util.PageFormatter;
 
 public class ContentEditer extends JTextArea {
     private PageFormatter formatter;

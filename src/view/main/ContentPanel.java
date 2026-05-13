@@ -5,8 +5,8 @@ import java.awt.Color;
 
 import javax.swing.JPanel;
 
-import src.view.components.ContentToolbar;
-import src.view.pages.ContentMain;
+import src.view.main.content.ContentMain;
+import src.view.main.content.ContentToolbar;
 
 public class ContentPanel extends JPanel {
     private ContentMain main;
@@ -22,9 +22,5 @@ public class ContentPanel extends JPanel {
         add(toolbar, BorderLayout.NORTH);
 
         setBackground(Color.WHITE);
-    }
-
-    public void setContent(String title, String content) {
-        main.setContent(title, content);
     }
 }

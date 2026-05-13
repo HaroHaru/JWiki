@@ -1,4 +1,4 @@
-package src.model.state;
+package src.util;
 
 public enum Mode {
     VIEW, EDIT, NOT_FOUND

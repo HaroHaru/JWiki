@@ -1,8 +1,12 @@
-package src.view.main;
+package src.view;
 
 import java.awt.*;
 
 import javax.swing.*;
+
+import src.view.main.ContentPanel;
+import src.view.main.HeaderPanel;
+import src.view.main.SidebarPanel;
 
 public class MainFrame extends JFrame {
     HeaderPanel headerPanel;
@@ -26,9 +30,5 @@ public class MainFrame extends JFrame {
         setVisible(true);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-    }
-
-    public void setContent(String title, String content) {
-        contentPanel.setContent(title, content);
     }
 }

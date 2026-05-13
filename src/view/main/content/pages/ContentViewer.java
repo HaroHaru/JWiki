@@ -1,9 +1,9 @@
-package src.view.pages;
+package src.view.main.content.pages;
 
 import javax.swing.JTextPane;
 import javax.swing.text.DefaultCaret;
 
-import src.model.PageFormatter; // need to erase
+import src.util.PageFormatter;
 
 public class ContentViewer extends JTextPane {
     private PageFormatter formatter;
