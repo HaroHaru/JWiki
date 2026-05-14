@@ -5,6 +5,7 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import src.enums.Mode;
 import src.view.main.content.pages.ContentEditer;
 import src.view.main.content.pages.ContentViewer;
 
@@ -13,9 +14,6 @@ public class ContentMain extends JPanel {
 
     private ContentEditer editer;
     private ContentViewer viewer;
-
-    private String title;
-    private String content;
 
     public ContentMain() {
         editer = new ContentEditer();
@@ -30,17 +28,25 @@ public class ContentMain extends JPanel {
         cardLayout.show(this, "viewer");
     }
 
-    public void setContent(String title, String content) {
-        this.title = title;
-        this.content = content;
+    public void setContent(String title, String content, Mode mode) {
+        switch (mode) {
+            case Mode.VIEW:
+                setViewMode(title, content);
+                break;
+            case Mode.EDIT:
+                setEditMode(title, content);
+                break;
+            default:
+                break;
+        }
     }
 
-    public void setViewMode() {
+    public void setViewMode(String title, String content) {
         viewer.setContent(title, content);
         cardLayout.show(this, "viewer");
     }
 
-    public void setEditMode() {
+    public void setEditMode(String title, String content) {
         editer.setContent(title, content);
         cardLayout.show(this, "editer");
     }

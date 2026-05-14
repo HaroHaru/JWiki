@@ -7,9 +7,14 @@ public class Document {
     private String content;
     private WikiPageService service;
 
-    public Document(String title) {
+    public Document() {
         service = new WikiPageService();
-        this.title = title;
+
+        if (!service.exists("Main")) {
+            service.create("Main", "# Temporary Page");
+        }
+
+        title = "Main";
         content = service.read(title);
     }
 

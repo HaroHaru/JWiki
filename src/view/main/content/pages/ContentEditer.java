@@ -1,20 +1,29 @@
 package src.view.main.content.pages;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JTextArea;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
-import src.util.PageFormatter;
-
-public class ContentEditer extends JTextArea {
-    private PageFormatter formatter;
+public class ContentEditer extends JPanel {
+    private JLabel title;
+    private JTextArea content;
 
     public ContentEditer() {
-        formatter = new PageFormatter();
+        title = new JLabel();
+        content = new JTextArea();
 
-        setLineWrap(true);
-        setWrapStyleWord(true);
+        content.setLineWrap(true);
+        content.setWrapStyleWord(true);
+
+        setLayout(new BorderLayout());
+        add(title, BorderLayout.NORTH);
+        add(content, BorderLayout.CENTER);
     }
 
     public void setContent(String title, String content) {
-        setText(formatter.format(title, content));
+        this.title.setText(title);
+        this.content.setText(content);
     }
 }

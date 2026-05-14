@@ -1,9 +1,11 @@
 package src.view;
 
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
+import src.enums.Mode;
 import src.view.main.ContentPanel;
 import src.view.main.HeaderPanel;
 import src.view.main.SidebarPanel;
@@ -30,5 +32,13 @@ public class MainFrame extends JFrame {
         setVisible(true);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    public void setContent(String title, String content, Mode mode) {
+        contentPanel.setContent(title, content, mode);
+    }
+
+    public void setToolbarListener(ActionListener[] listeners) {
+        contentPanel.setToolbarListener(listeners);
     }
 }

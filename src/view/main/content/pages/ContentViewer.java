@@ -1,25 +1,34 @@
 package src.view.main.content.pages;
 
+import java.awt.BorderLayout;
+
+import javax.swing.JPanel;
+import javax.swing.JLabel;
 import javax.swing.JTextPane;
 import javax.swing.text.DefaultCaret;
 
-import src.util.PageFormatter;
-
-public class ContentViewer extends JTextPane {
-    private PageFormatter formatter;
+public class ContentViewer extends JPanel {
+    private JLabel title;
+    private JTextPane content;
 
     public ContentViewer() {
-        formatter = new PageFormatter();
+        title = new JLabel();
+        content = new JTextPane();
 
-        setEditable(false);
-        setFocusable(false);
+        content.setEditable(false);
+        content.setFocusable(false);
 
-        DefaultCaret caret = (DefaultCaret) getCaret();
+        DefaultCaret caret = (DefaultCaret) content.getCaret();
         caret.setVisible(false);
         caret.setSelectionVisible(true);
+
+        setLayout(new BorderLayout());
+        add(title, BorderLayout.NORTH);
+        add(content, BorderLayout.CENTER);
     }
 
     public void setContent(String title, String content) {
-        setText(formatter.format(title, content));
+        this.title.setText(title);
+        this.content.setText(content);
     }
 }
