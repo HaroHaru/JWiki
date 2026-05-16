@@ -50,4 +50,8 @@ public class ContentMain extends JPanel {
         editer.setContent(title, content);
         cardLayout.show(this, "editer");
     }
+
+    public String getEditedContent() {
+        return editer.getEditedContent();
+    }
 }

@@ -26,4 +26,8 @@ public class ContentEditer extends JPanel {
         this.title.setText(title);
         this.content.setText(content);
     }
+
+    public String getEditedContent() {
+        return content.getText();
+    }
 }

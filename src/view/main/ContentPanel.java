@@ -28,9 +28,14 @@ public class ContentPanel extends JPanel {
 
     public void setContent(String title, String content, Mode mode) {
         main.setContent(title, content, mode);
+        toolbar.setMode(mode);
     }
 
     public void setToolbarListener(ActionListener[] listeners) {
         toolbar.setToolbarListener(listeners);
+    }
+
+    public String getEditedContent() {
+        return main.getEditedContent();
     }
 }

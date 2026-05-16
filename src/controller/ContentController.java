@@ -2,10 +2,9 @@ package src.controller;
 
 import src.view.MainFrame;
 import src.enums.Mode;
-import src.interfaces.StateObserver;
 import src.model.Document;
 
-public class ContentController implements StateObserver {
+public class ContentController {
     private Document document;
     private MainFrame view;
 
@@ -15,8 +14,8 @@ public class ContentController implements StateObserver {
         update(mode);
     }
 
-    @Override
     public void update(Mode mode) {
+        document.updateDocument();
         setContent(mode);
     }
 

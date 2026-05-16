@@ -41,4 +41,8 @@ public class MainFrame extends JFrame {
     public void setToolbarListener(ActionListener[] listeners) {
         contentPanel.setToolbarListener(listeners);
     }
+
+    public String getEditedContent() {
+        return contentPanel.getEditedContent();
+    }
 }

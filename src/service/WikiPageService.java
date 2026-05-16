@@ -40,4 +40,23 @@ public class WikiPageService {
 
         return "";
     }
+
+    public void update(String title, String content) {
+        try {
+            Path path = Path.of(PathManager.PAGES, title + ".md");
+            Files.writeString(path, content);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void delete(String title) {
+        try {
+            Path path = Path.of(PathManager.PAGES, title + ".md");
+
+            Files.deleteIfExists(path);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
