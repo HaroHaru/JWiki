@@ -1,20 +1,26 @@
 package src.view.main.content.pages;
 
-import java.awt.BorderLayout;
-
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.JTextPane;
+import javax.swing.JScrollPane;
+import javax.swing.JEditorPane;
 import javax.swing.text.DefaultCaret;
 
-public class ContentViewer extends JPanel {
-    private JLabel title;
-    private JTextPane content;
+import src.service.formatter.PageFormatter;
+
+public class ContentViewer extends JScrollPane {
+    private PageFormatter formatter;
+    private JEditorPane content;
 
     public ContentViewer() {
-        title = new JLabel();
-        content = new JTextPane();
+        formatter = new PageFormatter();
+        content = new JEditorPane() {
+            @Override
+            public boolean getScrollableTracksViewportWidth() {
 
+                return true;
+            }
+        };
+
+        content.setContentType("text/html");
         content.setEditable(false);
         content.setFocusable(false);
 
@@ -22,13 +28,10 @@ public class ContentViewer extends JPanel {
         caret.setVisible(false);
         caret.setSelectionVisible(true);
 
-        setLayout(new BorderLayout());
-        add(title, BorderLayout.NORTH);
-        add(content, BorderLayout.CENTER);
+        setViewportView(content);
     }
 
     public void setContent(String title, String content) {
-        this.title.setText(title);
-        this.content.setText(content);
+        this.content.setText(formatter.format(title, content));
     }
 }

@@ -22,7 +22,7 @@ public class ContentMain extends JPanel {
         cardLayout = new CardLayout();
         setLayout(cardLayout);
 
-        add(new JScrollPane(viewer), "viewer");
+        add(viewer, "viewer");
         add(new JScrollPane(editer), "editer");
 
         cardLayout.show(this, "viewer");
