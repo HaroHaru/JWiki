@@ -1,22 +1,22 @@
 package src.controller;
 
-import src.model.Document;
+import src.model.Page;
 import src.service.WikiPageService;
 import src.view.MainFrame;
 
 public class EditorController {
     WikiPageService service;
-    Document document;
+    Page page;
     MainFrame view;
 
-    public EditorController(MainFrame view, Document document) {
+    public EditorController(MainFrame view, Page page) {
         service = new WikiPageService();
-        this.document = document;
+        this.page = page;
         this.view = view;
     }
 
-    public void updateDocument() {
+    public void updatePage() {
         String updatedContent = view.getEditedContent();
-        service.update(document.getTitle(), updatedContent);
+        service.update(page.getTitle(), updatedContent);
     }
 }

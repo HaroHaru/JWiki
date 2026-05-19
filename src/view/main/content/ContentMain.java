@@ -54,4 +54,12 @@ public class ContentMain extends JPanel {
     public String getEditedContent() {
         return editer.getEditedContent();
     }
+
+    public void setTag(String tag) {
+        editer.setTag(tag);
+    }
+
+    public void setLink() {
+        editer.setLink();
+    }
 }

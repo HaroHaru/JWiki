@@ -2,24 +2,24 @@ package src.controller;
 
 import src.view.MainFrame;
 import src.enums.Mode;
-import src.model.Document;
+import src.model.Page;
 
 public class ContentController {
-    private Document document;
+    private Page page;
     private MainFrame view;
 
-    public ContentController(Document document, MainFrame view, Mode mode) {
-        this.document = document;
+    public ContentController(Page page, MainFrame view, Mode mode) {
+        this.page = page;
         this.view = view;
         update(mode);
     }
 
     public void update(Mode mode) {
-        document.updateDocument();
+        page.updatePage();
         setContent(mode);
     }
 
     private void setContent(Mode mode) {
-        view.setContent(document.getTitle(), document.getContent(), mode);
+        view.setContent(page.getTitle(), page.getContent(), mode);
     }
 }

@@ -31,11 +31,19 @@ public class ContentPanel extends JPanel {
         toolbar.setMode(mode);
     }
 
-    public void setToolbarListener(ActionListener[] listeners) {
-        toolbar.setToolbarListener(listeners);
+    public void setToolbarListener(ActionListener[] listeners, ActionListener[] editorListeners) {
+        toolbar.setToolbarListener(listeners, editorListeners);
     }
 
     public String getEditedContent() {
         return main.getEditedContent();
+    }
+
+    public void setTag(String tag) {
+        main.setTag(tag);
+    }
+
+    public void setLink() {
+        main.setLink();
     }
 }

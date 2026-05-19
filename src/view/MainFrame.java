@@ -38,11 +38,19 @@ public class MainFrame extends JFrame {
         contentPanel.setContent(title, content, mode);
     }
 
-    public void setToolbarListener(ActionListener[] listeners) {
-        contentPanel.setToolbarListener(listeners);
+    public void setToolbarListener(ActionListener[] listeners, ActionListener[] editorListeners) {
+        contentPanel.setToolbarListener(listeners, editorListeners);
     }
 
     public String getEditedContent() {
         return contentPanel.getEditedContent();
+    }
+
+    public void setTag(String tag) {
+        contentPanel.setTag(tag);
+    }
+
+    public void setLink() {
+        contentPanel.setLink();
     }
 }

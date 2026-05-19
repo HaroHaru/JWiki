@@ -2,12 +2,12 @@ package src.model;
 
 import src.service.WikiPageService;
 
-public class Document {
+public class Page {
     private String title;
     private String content;
     private WikiPageService service;
 
-    public Document() {
+    public Page() {
         service = new WikiPageService();
 
         if (!service.exists("Main")) {
@@ -26,16 +26,16 @@ public class Document {
         return content;
     }
 
-    public void updateDocument() {
+    public void updatePage() {
         content = service.read(title);
     }
 
-    public void updateDocument(String title) {
+    public void updatePage(String title) {
         this.title = title;
         content = service.read(title);
     }
 
-    public void deleteDocument() {
+    public void deletePage() {
         title = "";
         content = "";
     }
