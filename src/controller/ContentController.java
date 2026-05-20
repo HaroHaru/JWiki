@@ -1,16 +1,18 @@
 package src.controller;
 
 import src.view.MainFrame;
-import src.enums.Mode;
+import src.etc.Mode;
 import src.model.Page;
 
 public class ContentController {
     private Page page;
     private MainFrame view;
+    private SidebarController sidebarController;
 
-    public ContentController(Page page, MainFrame view, Mode mode) {
+    public ContentController(Page page, MainFrame view, Mode mode, SidebarController sidebarController) {
         this.page = page;
         this.view = view;
+        this.sidebarController = sidebarController;
         update(mode);
     }
 
@@ -29,5 +31,6 @@ public class ContentController {
 
     private void setContent(Mode mode) {
         view.setContent(page.getTitle(), page.getContent(), mode);
+        sidebarController.setSidebar();
     }
 }

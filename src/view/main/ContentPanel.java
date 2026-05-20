@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import javax.swing.event.HyperlinkListener;
 
-import src.enums.Mode;
+import src.etc.Mode;
 import src.view.main.content.ContentMain;
 import src.view.main.content.ContentToolbar;
 

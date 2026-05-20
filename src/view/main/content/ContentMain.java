@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.event.HyperlinkListener;
 
-import src.enums.Mode;
+import src.etc.Mode;
 import src.view.main.content.pages.ContentEditer;
 import src.view.main.content.pages.ContentViewer;
 

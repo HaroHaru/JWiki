@@ -3,6 +3,7 @@ package src.app;
 import src.controller.ContentController;
 import src.controller.DocLinkController;
 import src.controller.EditorController;
+import src.controller.SidebarController;
 import src.controller.StateController;
 import src.controller.ToolbarController;
 import src.model.Page;
@@ -16,7 +17,8 @@ public class App {
 
         MainFrame frame = new MainFrame(800, 600, 50, 200);
 
-        ContentController contentController = new ContentController(page, frame, state.getState());
+        SidebarController sidebarController = new SidebarController(page, frame);
+        ContentController contentController = new ContentController(page, frame, state.getState(), sidebarController);
         StateController stateController = new StateController(state);
         EditorController editorController = new EditorController(frame, page);
         ToolbarController toolbarController = new ToolbarController(frame, contentController, editorController,

@@ -2,11 +2,13 @@ package src.view;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 import javax.swing.*;
 import javax.swing.event.HyperlinkListener;
 
-import src.enums.Mode;
+import src.etc.Header;
+import src.etc.Mode;
 import src.view.main.ContentPanel;
 import src.view.main.HeaderPanel;
 import src.view.main.SidebarPanel;
@@ -57,5 +59,9 @@ public class MainFrame extends JFrame {
 
     public void setLinkListener(HyperlinkListener listener) {
         contentPanel.setLinkListener(listener);
+    }
+
+    public void setSidebar(List<Header> list) {
+        sidebarPanel.setTree(list);
     }
 }

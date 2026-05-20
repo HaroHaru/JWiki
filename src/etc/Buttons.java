@@ -1,4 +1,4 @@
-package src.enums;
+package src.etc;
 
 public enum Buttons {
     VIEW(0), EDIT(1), SAVE(2), DELETE(3), CREATE(4);

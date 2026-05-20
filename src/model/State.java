@@ -1,6 +1,6 @@
 package src.model;
 
-import src.enums.Mode;
+import src.etc.Mode;
 
 public class State {
     private Mode state;

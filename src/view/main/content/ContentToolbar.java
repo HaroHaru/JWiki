@@ -5,9 +5,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JToolBar;
 
-import src.enums.Buttons;
-import src.enums.EditerButtons;
-import src.enums.Mode;
+import src.etc.Buttons;
+import src.etc.EditerButtons;
+import src.etc.Mode;
 
 public class ContentToolbar extends JToolBar {
     JButton viewButton;

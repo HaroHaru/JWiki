@@ -1,6 +1,6 @@
 package src.controller;
 
-import src.enums.Mode;
+import src.etc.Mode;
 import src.model.State;
 
 public class StateController {

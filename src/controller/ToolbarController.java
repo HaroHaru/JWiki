@@ -2,9 +2,9 @@ package src.controller;
 
 import java.awt.event.ActionListener;
 
-import src.enums.Buttons;
-import src.enums.EditerButtons;
-import src.enums.Mode;
+import src.etc.Buttons;
+import src.etc.EditerButtons;
+import src.etc.Mode;
 import src.view.MainFrame;
 
 public class ToolbarController {

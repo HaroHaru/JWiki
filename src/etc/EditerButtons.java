@@ -1,4 +1,4 @@
-package src.enums;
+package src.etc;
 
 public enum EditerButtons {
     H1(0), H2(1), H3(2), BOLD(3), ITALIC(4), STRIKE(5), LINK(6);
