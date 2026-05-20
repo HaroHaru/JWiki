@@ -1,6 +1,5 @@
 package src.controller;
 
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import src.enums.Buttons;
@@ -58,13 +57,18 @@ public class ToolbarController {
 
     private void saveButton() {
         Mode mode = Mode.VIEW;
-        editorController.updatePage();
-        stateController.setState(mode);
-        contentController.update(mode);
+        if (editorController.updatePage()) {
+            stateController.setState(mode);
+            contentController.update(mode);
+        }
     }
 
     private void createButton() {
-
+        Mode mode = Mode.VIEW;
+        if (editorController.createPage()) {
+            stateController.setState(mode);
+            contentController.update(mode);
+        }
     }
 
     private void deleteButton() {

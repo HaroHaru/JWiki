@@ -1,6 +1,7 @@
 package src.app;
 
 import src.controller.ContentController;
+import src.controller.DocLinkController;
 import src.controller.EditorController;
 import src.controller.StateController;
 import src.controller.ToolbarController;
@@ -20,5 +21,6 @@ public class App {
         EditorController editorController = new EditorController(frame, page);
         ToolbarController toolbarController = new ToolbarController(frame, contentController, editorController,
                 stateController);
+        DocLinkController docLinkController = new DocLinkController(frame, contentController);
     }
 }

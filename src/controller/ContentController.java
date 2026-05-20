@@ -19,6 +19,14 @@ public class ContentController {
         setContent(mode);
     }
 
+    public void move(String title) {
+        if (page.updatePage(title)) {
+            setContent(Mode.VIEW);
+        } else {
+            setContent(Mode.EDIT);
+        }
+    }
+
     private void setContent(Mode mode) {
         view.setContent(page.getTitle(), page.getContent(), mode);
     }

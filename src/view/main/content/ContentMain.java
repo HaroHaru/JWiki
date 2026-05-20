@@ -4,6 +4,7 @@ import java.awt.CardLayout;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.event.HyperlinkListener;
 
 import src.enums.Mode;
 import src.view.main.content.pages.ContentEditer;
@@ -61,5 +62,9 @@ public class ContentMain extends JPanel {
 
     public void setLink() {
         editer.setLink();
+    }
+
+    public void setLinkListener(HyperlinkListener listener) {
+        viewer.setLinkListener(listener);
     }
 }

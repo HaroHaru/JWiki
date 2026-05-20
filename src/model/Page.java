@@ -30,9 +30,15 @@ public class Page {
         content = service.read(title);
     }
 
-    public void updatePage(String title) {
+    public boolean updatePage(String title) {
         this.title = title;
-        content = service.read(title);
+        if (service.exists(title)) {
+            content = service.read(title);
+            return true;
+        } else {
+            content = "";
+            return false;
+        }
     }
 
     public void deletePage() {

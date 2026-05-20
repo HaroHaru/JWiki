@@ -1,10 +1,11 @@
 package src.view.main.content.pages;
 
 import javax.swing.JScrollPane;
+import javax.swing.event.HyperlinkListener;
 import javax.swing.JEditorPane;
 import javax.swing.text.DefaultCaret;
 
-import src.service.formatter.PageFormatter;
+import src.service.PageFormatter;
 
 public class ContentViewer extends JScrollPane {
     private PageFormatter formatter;
@@ -33,5 +34,9 @@ public class ContentViewer extends JScrollPane {
 
     public void setContent(String title, String content) {
         this.content.setText(formatter.format(title, content));
+    }
+
+    public void setLinkListener(HyperlinkListener listener) {
+        content.addHyperlinkListener(listener);
     }
 }

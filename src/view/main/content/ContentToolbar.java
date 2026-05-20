@@ -60,6 +60,8 @@ public class ContentToolbar extends JToolBar {
         viewButton.addActionListener(listeners[Buttons.VIEW.getValue()]);
         editButton.addActionListener(listeners[Buttons.EDIT.getValue()]);
         saveButton.addActionListener(listeners[Buttons.SAVE.getValue()]);
+        createButton.addActionListener(listeners[Buttons.CREATE.getValue()]);
+        deleteButton.addActionListener(listeners[Buttons.DELETE.getValue()]);
 
         h1Button.addActionListener(editorListeners[EditerButtons.H1.getValue()]);
         h2Button.addActionListener(editorListeners[EditerButtons.H2.getValue()]);

@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+import javax.swing.event.HyperlinkListener;
 
 import src.enums.Mode;
 import src.view.main.ContentPanel;
@@ -52,5 +53,9 @@ public class MainFrame extends JFrame {
 
     public void setLink() {
         contentPanel.setLink();
+    }
+
+    public void setLinkListener(HyperlinkListener listener) {
+        contentPanel.setLinkListener(listener);
     }
 }

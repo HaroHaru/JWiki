@@ -1,4 +1,4 @@
-package src.service.formatter;
+package src.service;
 
 public class PageFormatter {
     public String format(String title, String content) {

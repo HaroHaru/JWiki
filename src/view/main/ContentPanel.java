@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
+import javax.swing.event.HyperlinkListener;
 
 import src.enums.Mode;
 import src.view.main.content.ContentMain;
@@ -45,5 +46,9 @@ public class ContentPanel extends JPanel {
 
     public void setLink() {
         main.setLink();
+    }
+
+    public void setLinkListener(HyperlinkListener listener) {
+        main.setLinkListener(listener);
     }
 }
