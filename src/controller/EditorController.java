@@ -22,7 +22,7 @@ public class EditorController {
             JOptionPane.showMessageDialog(
                     view,
                     "Document does not exist\nPlease click the \"Create\" Button\nto create the document",
-                    "404 NOT FOUND",
+                    "404 Not Found",
                     JOptionPane.ERROR_MESSAGE);
             return false;
         }
@@ -43,5 +43,18 @@ public class EditorController {
         String newContent = view.getEditedContent();
         service.create(page.getTitle(), newContent);
         return true;
+    }
+
+    public void deletePage() {
+        if (!service.exists(page.getTitle())) {
+            JOptionPane.showMessageDialog(
+                    view,
+                    "Cannot delete non-existent document",
+                    "404 Not Found",
+                    JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        service.delete(page.getTitle());
+        return;
     }
 }

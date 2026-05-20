@@ -40,9 +40,4 @@ public class Page {
             return false;
         }
     }
-
-    public void deletePage() {
-        title = "";
-        content = "";
-    }
 }

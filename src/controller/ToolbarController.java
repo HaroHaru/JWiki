@@ -72,7 +72,8 @@ public class ToolbarController {
     }
 
     private void deleteButton() {
-
+        editorController.deletePage();
+        contentController.move("Main");
     }
 
     private void tagButton(String tag) {
