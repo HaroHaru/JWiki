@@ -26,6 +26,6 @@ public class LogoController {
     }
 
     private void moveToMain() {
-        contentController.move("Main");
+        contentController.move("Main", false);
     }
 }

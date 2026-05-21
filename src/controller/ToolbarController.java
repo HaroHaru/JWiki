@@ -26,6 +26,7 @@ public class ToolbarController {
         ActionListener[] listeners = new ActionListener[Buttons.values().length];
         ActionListener[] editorListeners = new ActionListener[EditerButtons.values().length];
 
+        listeners[Buttons.PREV.getValue()] = (e -> prevButton());
         listeners[Buttons.VIEW.getValue()] = (e -> viewButton());
         listeners[Buttons.EDIT.getValue()] = (e -> editButton());
         listeners[Buttons.SAVE.getValue()] = (e -> saveButton());
@@ -41,6 +42,10 @@ public class ToolbarController {
         editorListeners[EditerButtons.LINK.getValue()] = (e -> linkButton());
 
         view.setToolbarListener(listeners, editorListeners);
+    }
+
+    private void prevButton() {
+        contentController.prev();
     }
 
     private void viewButton() {
@@ -73,7 +78,7 @@ public class ToolbarController {
 
     private void deleteButton() {
         editorController.deletePage();
-        contentController.move("Main");
+        contentController.move("Main", false);
     }
 
     private void tagButton(String tag) {

@@ -10,6 +10,7 @@ import src.etc.EditerButtons;
 import src.etc.Mode;
 
 public class ContentToolbar extends JToolBar {
+    JButton prevButton;
     JButton viewButton;
     JButton editButton;
     JButton saveButton;
@@ -25,11 +26,16 @@ public class ContentToolbar extends JToolBar {
     JButton linkButton;
 
     public ContentToolbar() {
+        prevButton = new JButton("Prev");
         viewButton = new JButton("View");
         editButton = new JButton("Edit");
         saveButton = new JButton("Save");
         createButton = new JButton("Create");
         deleteButton = new JButton("Delete");
+
+        add(prevButton);
+
+        addSeparator();
 
         add(viewButton);
         add(editButton);
@@ -57,6 +63,7 @@ public class ContentToolbar extends JToolBar {
     }
 
     public void setToolbarListener(ActionListener[] listeners, ActionListener[] editorListeners) {
+        prevButton.addActionListener(listeners[Buttons.PREV.getValue()]);
         viewButton.addActionListener(listeners[Buttons.VIEW.getValue()]);
         editButton.addActionListener(listeners[Buttons.EDIT.getValue()]);
         saveButton.addActionListener(listeners[Buttons.SAVE.getValue()]);
@@ -75,6 +82,7 @@ public class ContentToolbar extends JToolBar {
     public void setMode(Mode mode) {
         boolean isView = mode == Mode.VIEW;
 
+        prevButton.setVisible(isView);
         viewButton.setVisible(isView);
         editButton.setVisible(isView);
 

@@ -1,7 +1,7 @@
 package src.etc;
 
 public enum Buttons {
-    VIEW(0), EDIT(1), SAVE(2), DELETE(3), CREATE(4);
+    PREV(0), VIEW(1), EDIT(2), SAVE(3), DELETE(4), CREATE(5);
 
     private final int value;
 

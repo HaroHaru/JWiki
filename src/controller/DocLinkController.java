@@ -22,7 +22,7 @@ public class DocLinkController {
 
     private void linkClicked(HyperlinkEvent e) {
         if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
-            contentController.move(e.getDescription());
+            contentController.move(e.getDescription(), false);
         }
     }
 }

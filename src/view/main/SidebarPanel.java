@@ -47,9 +47,9 @@ public class SidebarPanel extends JPanel {
         parentList[0] = root;
 
         for (Header h : list) {
-            DefaultMutableTreeNode node = new DefaultMutableTreeNode(h.getTitle());
+            DefaultMutableTreeNode node = new DefaultMutableTreeNode(h.title);
 
-            int level = h.getLevel();
+            int level = h.level;
 
             DefaultMutableTreeNode parent = null;
 

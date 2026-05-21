@@ -23,7 +23,7 @@ public class SearchController {
     public void search() {
         String search = view.getSearch();
         if (!search.isEmpty()) {
-            contentController.move(search);
+            contentController.move(search, false);
         }
     }
 }
