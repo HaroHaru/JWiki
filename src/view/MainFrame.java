@@ -2,6 +2,7 @@ package src.view;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 import java.util.List;
 
 import javax.swing.*;
@@ -63,5 +64,9 @@ public class MainFrame extends JFrame {
 
     public void setSidebar(List<Header> list) {
         sidebarPanel.setTree(list);
+    }
+
+    public void setLogoListener(MouseListener listener) {
+        headerPanel.addMouseListener(listener);
     }
 }

@@ -1,0 +1,24 @@
+package src.view.main.header;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class SearchBar extends JPanel {
+    JTextField textField;
+    JButton searchButton;
+
+    public SearchBar(int height) {
+        textField = new JTextField();
+        searchButton = new JButton("Go");
+
+        setPreferredSize(new Dimension((height - 10) * 7, height - 10));
+        setLayout(new BorderLayout());
+
+        add(textField, BorderLayout.CENTER);
+        add(searchButton, BorderLayout.EAST);
+    }
+}
