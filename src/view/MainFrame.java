@@ -6,6 +6,7 @@ import java.awt.event.MouseListener;
 import java.util.List;
 
 import javax.swing.*;
+import javax.swing.event.DocumentListener;
 import javax.swing.event.HyperlinkListener;
 
 import src.etc.Header;
@@ -68,5 +69,13 @@ public class MainFrame extends JFrame {
 
     public void setLogoListener(MouseListener listener) {
         headerPanel.addMouseListener(listener);
+    }
+
+    public void setSearch(ActionListener listener) {
+        headerPanel.setSearch(listener);
+    }
+
+    public String getSearch() {
+        return headerPanel.getSearch();
     }
 }

@@ -2,6 +2,7 @@ package src.view.main.header;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -20,5 +21,15 @@ public class SearchBar extends JPanel {
 
         add(textField, BorderLayout.CENTER);
         add(searchButton, BorderLayout.EAST);
+    }
+
+    public void setSearch(ActionListener listener) {
+        searchButton.addActionListener(listener);
+    }
+
+    public String getSearch() {
+        String search = textField.getText();
+        textField.setText("");
+        return search;
     }
 }

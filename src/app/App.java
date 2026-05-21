@@ -4,6 +4,7 @@ import src.controller.ContentController;
 import src.controller.DocLinkController;
 import src.controller.EditorController;
 import src.controller.LogoController;
+import src.controller.SearchController;
 import src.controller.SidebarController;
 import src.controller.StateController;
 import src.controller.ToolbarController;
@@ -26,5 +27,6 @@ public class App {
                 stateController);
         DocLinkController docLinkController = new DocLinkController(frame, contentController);
         LogoController logoController = new LogoController(frame, contentController);
+        SearchController searchController = new SearchController(frame, contentController);
     }
 }
